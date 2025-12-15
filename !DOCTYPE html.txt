@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exodia Gallery</title>
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Responsive container that preserves the image ratio */
+    .gallery {
+      position: relative;
+      width: min(100vw, 1000px); /* scales down on small screens */
+      aspect-ratio: 800 / 533;   /* your image ratio */
+      background: url("exodia.png") center / contain no-repeat;
+    }
+
+    /* Clickable areas */
+    .hotspot {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+
+      /* TURN ON alignment view (temporary) */
+      background: rgba(0, 255, 255, 0.12);
+      outline: 2px solid rgba(0, 255, 255, 0.35);
+      border-radius: 10px;
+    }
+
+    /* AFTER you confirm alignment:
+       Replace the .hotspot styles above with this instead:
+
+    .hotspot {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      background: transparent;
+      outline: none;
+      border-radius: 10px;
+    }
+
+    */
+  </style>
+</head>
+
+<body>
+  <div class="gallery" role="img" aria-label="Exodia gallery with clickable paintings">
+
+    <!-- HEAD / TORSO (center painting) -->
+    <a class="hotspot"
+       href="https://example.com/head"
+       target="_blank" rel="noopener"
+       style="left: 33%; top: 6%; width: 34%; height: 42%;"
+       aria-label="Open Exodia Head/Torso"></a>
+
+    <!-- LEFT ARM (top-left) -->
+    <a class="hotspot"
+       href="https://example.com/left-arm"
+       target="_blank" rel="noopener"
+       style="left: 4%; top: 8%; width: 26%; height: 36%;"
+       aria-label="Open Exodia Left Arm"></a>
+
+    <!-- RIGHT ARM (top-right) -->
+    <a class="hotspot"
+       href="https://example.com/right-arm"
+       target="_blank" rel="noopener"
+       style="left: 70%; top: 8%; width: 26%; height: 36%;"
+       aria-label="Open Exodia Right Arm"></a>
+
+    <!-- LEFT LEG (bottom-left) -->
+    <a class="hotspot"
+       href="https://example.com/left-leg"
+       target="_blank" rel="noopener"
+       style="left: 6%; top: 48%; width: 26%; height: 36%;"
+       aria-label="Open Exodia Left Leg"></a>
+
+    <!-- RIGHT LEG (bottom-right) -->
+    <a class="hotspot"
+       href="https://example.com/right-leg"
+       target="_blank" rel="noopener"
+       style="left: 68%; top: 48%; width: 26%; height: 36%;"
+       aria-label="Open Exodia Right Leg"></a>
+
+  </div>
+</body>
+</html>
