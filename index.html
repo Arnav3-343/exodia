@@ -17,6 +17,7 @@
       min-height: 100vh;
     }
 
+    /* Responsive container that preserves the image ratio */
     .gallery {
       position: relative;
       width: min(100vw, 1000px);
@@ -24,58 +25,69 @@
       background: url("exodia.png") center / contain no-repeat;
     }
 
+    /* Clickable areas */
+    
     .hotspot {
       position: absolute;
       display: block;
       cursor: pointer;
+      background: transparent;
+      outline: none;
+      border-radius: 10px;
+    };
+    
 
-      /* Debug ON */
-      background: rgba(0, 255, 255, 0.12);
-      outline: 2px solid rgba(0, 255, 255, 0.35);
+    /* AFTER alignment is confirmed, replace the .hotspot block above with:
+    .hotspot {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      background: transparent;
+      outline: none;
       border-radius: 10px;
     }
+    */
   </style>
 </head>
 
 <body>
   <div class="gallery" role="img" aria-label="Exodia gallery with clickable paintings">
 
-    <!-- HEAD / TORSO -->
+    <!-- HEAD / TORSO (Portfolio) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/portfolio?authuser=2"
-       onclick="window.top.location.href=this.href; return false;"
+       target="_blank" rel="noopener"
        style="left: 33%; top: 6%; width: 34%; height: 42%;"
        aria-label="Open Portfolio"></a>
 
-    <!-- LEFT ARM -->
+    <!-- LEFT ARM (Video) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/video?authuser=2"
-       onclick="window.top.location.href=this.href; return false;"
+       target="_blank" rel="noopener"
        style="left: 4%; top: 8%; width: 26%; height: 36%;"
        aria-label="Open Video"></a>
 
-    <!-- RIGHT ARM -->
+    <!-- RIGHT ARM (About Me) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/about-me?authuser=2"
-       onclick="window.top.location.href=this.href; return false;"
+       target="_blank" rel="noopener"
        style="left: 70%; top: 8%; width: 26%; height: 36%;"
        aria-label="Open About Me"></a>
 
-    <!-- LEFT LEG -->
+    <!-- LEFT LEG (Multimedia) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/mutlimedia?authuser=2"
-       onclick="window.top.location.href=this.href; return false;"
+       target="_blank" rel="noopener"
        style="left: 6%; top: 48%; width: 26%; height: 36%;"
        aria-label="Open Multimedia"></a>
 
-    <!-- RIGHT LEG -->
+    <!-- RIGHT LEG (Cultural Art Unit) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/cultural-art-unit?authuser=2"
-       onclick="window.top.location.href=this.href; return false;"
+       target="_blank" rel="noopener"
        style="left: 68%; top: 48%; width: 26%; height: 36%;"
        aria-label="Open Cultural Art Unit"></a>
 
   </div>
 </body>
 </html>
-
