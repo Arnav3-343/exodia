@@ -20,26 +20,22 @@
     /* Responsive container that preserves the image ratio */
     .gallery {
       position: relative;
-      width: min(100vw, 1000px); /* scales down on small screens */
-      aspect-ratio: 800 / 533;   /* your image ratio */
+      width: min(100vw, 1000px);
+      aspect-ratio: 800 / 533;
       background: url("exodia.png") center / contain no-repeat;
     }
 
-    /* Clickable areas */
+    /* Clickable areas (DEBUG ON – remove later) */
     .hotspot {
       position: absolute;
       display: block;
       cursor: pointer;
-
-      /* TURN ON alignment view (temporary) */
       background: rgba(0, 255, 255, 0.12);
       outline: 2px solid rgba(0, 255, 255, 0.35);
       border-radius: 10px;
     }
 
-    /* AFTER you confirm alignment:
-       Replace the .hotspot styles above with this instead:
-
+    /* AFTER alignment is confirmed, replace the block above with:
     .hotspot {
       position: absolute;
       display: block;
@@ -48,7 +44,6 @@
       outline: none;
       border-radius: 10px;
     }
-
     */
   </style>
 </head>
@@ -59,37 +54,32 @@
     <!-- HEAD / TORSO (center painting) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/portfolio?authuser=2"
-       target="_blank" rel="noopener"
        style="left: 33%; top: 6%; width: 34%; height: 42%;"
-       aria-label="Open Exodia Head/Torso"></a>
+       aria-label="Exodia Head / Portfolio"></a>
 
     <!-- LEFT ARM (top-left) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/video?authuser=2"
-       target="_blank" rel="noopener"
        style="left: 4%; top: 8%; width: 26%; height: 36%;"
-       aria-label="Open Exodia Left Arm"></a>
+       aria-label="Exodia Left Arm / Video"></a>
 
     <!-- RIGHT ARM (top-right) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/about-me?authuser=2"
-       target="_blank" rel="noopener"
        style="left: 70%; top: 8%; width: 26%; height: 36%;"
-       aria-label="Open Exodia Right Arm"></a>
+       aria-label="Exodia Right Arm / About Me"></a>
 
     <!-- LEFT LEG (bottom-left) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/mutlimedia?authuser=2"
-       target="_blank" rel="noopener"
        style="left: 6%; top: 48%; width: 26%; height: 36%;"
-       aria-label="Open Exodia Left Leg"></a>
+       aria-label="Exodia Left Leg / Multimedia"></a>
 
     <!-- RIGHT LEG (bottom-right) -->
     <a class="hotspot"
        href="https://sites.google.com/students.esuhsd.org/arnavportfolio/cultural-art-unit?authuser=2"
-       target="_blank" rel="noopener"
        style="left: 68%; top: 48%; width: 26%; height: 36%;"
-       aria-label="Open Exodia Right Leg"></a>
+       aria-label="Exodia Right Leg / Cultural Art"></a>
 
   </div>
 </body>
